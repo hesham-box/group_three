@@ -18,7 +18,7 @@ require __DIR__ . '/auth.php';
 
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
     Route::get('/', function () {
-        return view('Admin.layouts.master');
+        return view('site.layouts.master');
     });
 
 });
