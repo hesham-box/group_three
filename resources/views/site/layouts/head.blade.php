@@ -31,5 +31,5 @@
     <meta name="apple-mobile-web-app-title" content="Joo Template">
     <link rel="icon" type="image/png" sizes="32x32" href="site/assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="site/assets/images/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" href="./assets/images/favicons/favicon.ico">
+    <link rel="shortcut icon" href="site/assets/images/favicons/favicon.ico">
   </head>
