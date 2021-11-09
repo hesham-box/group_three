@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class navbar_details extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 }

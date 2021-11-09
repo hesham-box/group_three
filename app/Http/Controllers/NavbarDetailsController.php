@@ -14,7 +14,7 @@ class NavbarDetailsController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
