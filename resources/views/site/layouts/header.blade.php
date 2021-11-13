@@ -124,11 +124,16 @@
                 <div class="nav-wrap">
                   <nav class="main-navigation right">
                     <ul class="menu">
-                      <li class="mega-menu niche-templates">
-                        <a href="./index.html">الرئيسية</a>
+                    @foreach ($nav_Data as $nav_Datas)
+                        <li>
+                        <a href="./index.html">{{$nav_Datas->name}}</a>
                       </li>
-                      <li>
-                        <a href="./features/index.html">المميزات</a>
+                    @endforeach
+                      {{-- {<li>
+                        <a href="./index.html">الرئيسية</a>
+                      </li> --}}
+                      {{-- <li> --}}
+                        {{-- <a href="./features/index.html">المميزات</a> --}}
                         {{-- <ul>
                           <li>
                             <a href="javascript:void(0);">header
@@ -859,7 +864,7 @@
                             </ul>
                           </li>
                         </ul> --}}
-                      </li>
+                      {{-- </li>
                       <li>
                         <a href="./pages/index.html">الصفحات</a>
                       </li>
@@ -871,7 +876,7 @@
                       </li>
                       <li class="mega-menu">
                         <a href="./elements/index.html">العناصر</a>
-                      </li>
+                      </li> --}}
                     </ul>
                   </nav>
                   <!-- #site-navigation -->

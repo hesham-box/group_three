@@ -23,3 +23,10 @@ require __DIR__.'/auth.php';
 // })->middleware(['auth'])->name('dashboard');
 
 
+// Route::resource('home','\App\Http\Controllers\HomeController');
+
+// Route::get('/dashboard', function () {
+//    return view('Admin.layouts.master');
+// })->name('dashboard');
+
+

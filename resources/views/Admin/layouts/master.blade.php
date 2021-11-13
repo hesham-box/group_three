@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="ar">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -31,7 +31,11 @@
         @include('Admin.layouts.Sidebar')
         <!-- End Sidebar -->
         <div class="content-page">
-            @include('Admin.layouts.Header')
+            <div class="content">
+
+                @include('Admin.layouts.Header')
+                @yield('content')
+            </div>
 
             <!-- Footer -->
             @include('Admin.layouts.footer')

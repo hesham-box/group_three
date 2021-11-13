@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use App\Http\Controllers\admin_HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +17,21 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 require __DIR__ . '/auth.php';
 
-Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
-    Route::get('/', function () {
-        return view('site.layouts.master');
-    });
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+    ],function () {
+
+    // Route::get('/', function () {return view('site.layouts.master');});
+    Route::resource('/dashboard', admin_HomeController::class);
+
 
 });
+
+Route::resource('navbar_data','\App\Http\Controllers\NavbarDetailsController');
+
+
 
 
 

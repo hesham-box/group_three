@@ -17,16 +17,16 @@
                 <li class="menu-title">Main</li>
 
                 <li>
-                    <a href="index.html" class="waves-effect">
+                    <a href="" class="waves-effect">
                         <i class="dripicons-home"></i>
-                        <span> Dashboard <span class="badge badge-success badge-pill float-right">3</span></span>
+                        <span>{{ trans('admin_trans.Dashbord') }}<span class="badge badge-success badge-pill float-right"></span></span>
                     </a>
                 </li>
 
                 <li class="has_sub">
                     <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-briefcase"></i> <span> Elements </span> <span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                     <ul class="list-unstyled">
-                        <li><a href="ui-alerts.html">Alerts</a></li>
+                        <li><a href="navbar_data">لوحة تحكم الموقع</a></li>
                         <li><a href="ui-badge.html">Badge</a></li>
                         <li><a href="ui-buttons.html">Buttons</a></li>
                         <li><a href="ui-cards.html">Cards</a></li>
@@ -150,3 +150,4 @@
         <div class="clearfix"></div>
     </div> <!-- end sidebarinner -->
 </div>
+<!-- Left Sidebar End -->

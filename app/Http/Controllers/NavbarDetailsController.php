@@ -14,7 +14,8 @@ class NavbarDetailsController extends Controller
      */
     public function index()
     {
-        
+        $nav=navbar_details::all();
+        return view('Admin.dashbord_forms.navbar_data',compact('nav'));
     }
 
     /**
