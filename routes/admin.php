@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -6,12 +7,12 @@ use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Admin Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
+| Here is where you can register Admin routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| contains the "Admin" middleware group. Now create something great!
 |
 */
 
@@ -20,7 +21,7 @@ require __DIR__ . '/auth.php';
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+        'middleware' => ['auth','localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ],function () {
 
     // Route::get('/', function () {return view('site.layouts.master');});
@@ -28,8 +29,6 @@ Route::group(
     Route::resource('navbar_data',Controllers\NavbarDetailsController::class);
     Route::resource('/users', Controllers\Admin\UsersController::class);
 });
-
-
 
 
 
