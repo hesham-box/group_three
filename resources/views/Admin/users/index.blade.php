@@ -1,16 +1,14 @@
 @extends('Admin.layouts.master')
 @section('content')
+@include('partial.error')
 <div class="row">
     <div class="col-lg-12">
         <div class="card m-b-30">
             <div class="card-body">
-
-                <h4 class="mt-0 header-title">Striped rows</h4>
-                <p class="text-muted m-b-30">
-                    Use <code>.table-striped</code> to add zebra-striping to any table row
-                    within the <code>&lt;tbody&gt;</code>.
-                </p>
-
+                <h4 class="mt-0 header-title">table users</h4>
+                <div class="col-md-6 mb-3">
+                    <a href="{{ route('users.create') }}"  class="btn btn-primary btn-block"><i class="fa fa-user-circle"></i> Add User</a>
+                </div>
                 <div class="table-responsive">
                     <table class="table table-striped mb-0">
                         <thead>
@@ -26,8 +24,8 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ( $users as $index=>$user )
                             <tr>
-                                @foreach ( $users as $index=>$user )
                                 <th scope="row">{{ $index +1 }}</th>
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
@@ -53,8 +51,8 @@
                                         </button>
                                     </form>
                                 </td>
-                                @endforeach
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
