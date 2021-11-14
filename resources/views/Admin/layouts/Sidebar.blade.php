@@ -25,6 +25,15 @@
                 </li>
                 {{-- End home dashboard  --}}
                 <li class="menu-title"><h5>{{ trans('site.component') }}</h5></li>
+<<<<<<< HEAD
+                <li class="has_sub">
+                    <a href="#" class="waves-effect"><i class="dripicons-home"></i><span>{{ trans('site.admins') }}<span class="menu-arrow float-right "></span>
+                        </span>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li><a href="navbar_data">{{ trans('site.Navbar Data') }}</a></li>
+                    </ul>
+=======
                {{-- route Admin  --}}
                <li>
                 <a href="#" class="waves-effect">
@@ -33,6 +42,7 @@
                         <span class="badge badge-success badge-pill float-right"></span>
                     </span>
                 </a>
+>>>>>>> b62a21b16aaf5d8f65fdac3be44aa0bfab69fac0
                 </li>
                {{-- End route Admin  --}}
                {{--  route user till i make multi auth as soon as possible  --}}
