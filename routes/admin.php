@@ -25,7 +25,7 @@ Route::group(
 
     // Route::get('/', function () {return view('site.layouts.master');});
     Route::resource('/dashboard', Controllers\admin_HomeController::class);
-    Route::resource('/front', Controllers\HomeController::class);
+   
 
 });
 
