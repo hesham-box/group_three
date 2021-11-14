@@ -45,7 +45,7 @@ class UsersController extends Controller
     'email' => 'required|email|unique:users,email',
     'password' => 'required|same:confirm-password',
     'image' => 'image',
-    'status' => 'required',
+    'status' => 'required|in:active,unactive',
     ]);
      try{
             $data = new User();
@@ -63,7 +63,7 @@ class UsersController extends Controller
             $data->phone = $request->phone;
             $data->address = $request->address;
             $data->save();
-            // toastr()->success(__('user create successfully'));
+            toastr()->success(__('user create successfully'));
             return redirect()->route('users.index');
 
         } catch (\Exception $e) {
@@ -102,7 +102,7 @@ class UsersController extends Controller
             'email' => ['required',Rule::unique('users')->ignore($id),],
             // 'password' => 'required|same:confirm-password',
             'image' => 'image',
-            'status' => 'required',
+            'status' => 'required|in:active,unactive',
             ]);
              try{
                     $data = User::find($id);
@@ -124,7 +124,7 @@ class UsersController extends Controller
                     $data->phone = $request->phone;
                     $data->address = $request->address;
                     $data->update();
-                    // toastr()->success(__('user update successfully'));
+                    toastr()->success(__('user update successfully'));
                     return redirect()->route('users.index');
 
                 } catch (\Exception $e) {
@@ -149,7 +149,7 @@ class UsersController extends Controller
                 }
             }
             $data->delete();
-            // toastr()->error(__('user delete successfully'));
+            toastr()->error(__('user delete successfully'));
             return redirect()->route('users.index');
         }catch (\Exception $e){
                 return redirect()->back()->withErrors(['error' => $e->getMessage()]);

@@ -15,4 +15,6 @@
     <link href="{{ URL::asset('admin/en/assets/css/icons.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('admin/en/assets/css/style.css') }}" rel="stylesheet">
 @endif
+@toastr_css
 @yield('css')
+

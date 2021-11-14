@@ -25,7 +25,6 @@ class adminseeder extends Seeder
         ]);
 
         DB::table('users')->delete();
-        // User::create([
         DB::table('users')->insert([
             [
                 'name' => 'ahmed',

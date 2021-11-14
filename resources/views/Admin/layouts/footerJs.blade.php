@@ -21,5 +21,19 @@
 
 <!-- App js -->
 <script src="{{ URL::asset('admin/en/assets/js/app.js')}}"></script>
-
+@toastr_js
+@toastr_render
 @yield('js')
+{{-- image preview --}}
+<script>
+    $(".img").change(function(){
+        if(this.files && this.files[0]){
+            var reader = new FileReader();
+            reader.onload = function(e){
+                $(".img-preview").attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+</script>
+{{-- end image preview --}}
