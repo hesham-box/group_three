@@ -11,11 +11,59 @@
     <div class="sidebar-inner slimscrollleft">
         <div id="sidebar-menu">
             <ul>
-                <li class="menu-title">Main</li>
+                <li class="menu-title">{{ trans('site.component') }}</li>
                 <li>
-                    <a href="" class="waves-effect">
+                    <a href="#" class="waves-effect">
                         <i class="dripicons-home"></i>
-                        <span>{{ trans('admin.admin_trans.Dashboard') }}
+                        <span>{{ trans('site.admins') }}
+                            <span class="badge badge-success badge-pill float-right"></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+                        <i class="dripicons-home"></i>
+                        <span>{{ trans('site.clients') }}
+                            <span class="badge badge-success badge-pill float-right"></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+                        <i class="dripicons-home"></i>
+                        <span>{{ trans('site.serv') }}
+                            <span class="badge badge-success badge-pill float-right"></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+                        <i class="dripicons-home"></i>
+                        <span>{{ trans('site.categories') }}
+                            <span class="badge badge-success badge-pill float-right"></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+                        <i class="dripicons-home"></i>
+                        <span>{{ trans('site.Products') }}
+                            <span class="badge badge-success badge-pill float-right"></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+                        <i class="fa fa-signing"></i>
+                        <span>{{ trans('site.feedback') }}
+                            <span class="badge badge-success badge-pill float-right"></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+                        <i class="dripicons-home"></i>
+                        <span>{{ trans('site.tracking-steps') }}
                             <span class="badge badge-success badge-pill float-right"></span>
                         </span>
                     </a>
