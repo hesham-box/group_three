@@ -10,7 +10,10 @@ return [
    'delete'=>'Delete',
    //    sidebar
    'dashboard'=>'Dashboard',
+   //admin
    'admins'=>'Admins',
+   'Navbar Data'=>'Navbar Data',
+   //end admin
    'permissions'=>'Permissions',
    'clients'=>'clients',
    'component'=>'Component',

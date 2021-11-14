@@ -23,13 +23,13 @@
                     </a>
                 </li>
                 <li class="menu-title"><h5>{{ trans('site.component') }}</h5></li>
-                <li>
-                    <a href="#" class="waves-effect">
-                        <i class="dripicons-home"></i>
-                        <span>{{ trans('site.admins') }}
-                            <span class="badge badge-success badge-pill float-right"></span>
+                <li class="has_sub">
+                    <a href="#" class="waves-effect"><i class="dripicons-home"></i><span>{{ trans('site.admins') }}<span class="menu-arrow float-right "></span>
                         </span>
                     </a>
+                    <ul class="list-unstyled">
+                        <li><a href="navbar_data">{{ trans('site.Navbar Data') }}</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="#" class="waves-effect">

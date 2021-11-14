@@ -17,17 +17,25 @@ class adminseeder extends Seeder
     public function run()
     {
         DB::table('admins')->delete();
+
         Admin::create([
-            'name'     =>'wolf',
-            'email'    =>'ahmedragabyasin2020@gmail.com',
-            'password' =>bcrypt('258258258'),
+            'name' =>'wolf','email'=>'ahmedragabyasin2020@gmail.com','password' =>bcrypt('258258258'),
             // 'admin'    =>'1',
         ]);
+
         DB::table('users')->delete();
-        User::create([
+        // User::create([
+            DB::table('users')->insert([
+            [
             'name'     =>'ahmed',
             'email'    =>'ahmed@gmail.com',
-            'password' =>bcrypt('258258258'),
+            'password' =>bcrypt('258258258')
+            ],
+            [
+                'name'     =>'hesham',
+                'email'    =>'hesham@gmail.com',
+                'password' =>bcrypt('123456')
+            ]
             // 'admin'    =>'0',
         ]);
     }

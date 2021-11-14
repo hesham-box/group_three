@@ -1,6 +1,8 @@
 @extends('Admin.layouts.master')
 @section('css')
-
+  <!-- DataTables -->
+  <link href="{{ URL::asset('plugins/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+  <link href="{{ URL::asset('plugins/datatables/buttons.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
 @section('title')
     empty
 @stop
@@ -16,22 +18,7 @@
                         <div class="col-md-8">
                             <h4 class="page-title m-0">Navbar Data</h4>
                         </div>
-                        <div class="col-md-4">
-                            <div class="float-right d-none d-md-block">
-                                <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="ti-settings mr-1"></i> Settings
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Separated link</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                         <!-- end col -->
                     </div>
                     <!-- end row -->
@@ -46,147 +33,75 @@
                 <div class="card m-b-30">
                     <div class="card-body">
 
-                        <h4 class="mt-0 header-title">Textual inputs</h4>
+                        {{-- <h4 class="mt-0 header-title">Textual inputs</h4>
                         <p class="text-muted m-b-30 font-14">Here are examples of <code
                                 class="highlighter-rouge">.form-control</code> applied to each
                             textual HTML5 <code class="highlighter-rouge">&lt;input&gt;</code> <code
-                                    class="highlighter-rouge">type</code>.</p>
+                                    class="highlighter-rouge">type</code>.</p> --}}
+                                    <div class="d-flex justify-content-between">
+                                        <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal">اضافة</button>
+                                       </div>
+                                         <!-- sample modal content -->
+                                         <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title mt-0" id="myModalLabel">اضافة صفحة</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="{{ route('navbar_data.store') }}" method="post">{{ csrf_field() }}
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <label for="">الاسم عربي</label>
+                                                                <input type="text" class="form-control" name="Name" id="Name">
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label for="">English Name</label>
+                                                                <input type="text" class="form-control" name="Name_en" id="Name_en">
+                                                            </div>
+                                                        </div>
 
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-2 col-form-label">Text</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-search-input" class="col-sm-2 col-form-label">Search</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="search" value="How do I shoot web" id="example-search-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-email-input" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-url-input" class="col-sm-2 col-form-label">URL</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="url" value="https://getbootstrap.com" id="example-url-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-tel-input" class="col-sm-2 col-form-label">Telephone</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-password-input" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="password" value="hunter2" id="example-password-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-number-input" class="col-sm-2 col-form-label">Number</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="number" value="42" id="example-number-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-datetime-local-input" class="col-sm-2 col-form-label">Date and time</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-date-input" class="col-sm-2 col-form-label">Date</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-month-input" class="col-sm-2 col-form-label">Month</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="month" value="2011-08" id="example-month-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-week-input" class="col-sm-2 col-form-label">Week</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="week" value="2011-W33" id="example-week-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-time-input" class="col-sm-2 col-form-label">Time</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="time" value="13:45:00" id="example-time-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-color-input" class="col-sm-2 col-form-label">Color</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="color" value="#5985ee" id="example-color-input">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Select</label>
-                            <div class="col-sm-10">
-                                <select class="form-control">
-                                    <option>Select</option>
-                                    <option>Large select</option>
-                                    <option>Small select</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Custom Select</label>
-                            <div class="col-sm-10">
-                                <select class="custom-select">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-text-input-lg" class="col-sm-2 col-form-label">Large</label>
-                            <div class="col-sm-10">
-                                <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" id="example-text-input-lg">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-text-input-sm" class="col-sm-2 col-form-label">Small</label>
-                            <div class="col-sm-10">
-                                <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" id="example-text-input-sm">
-                            </div>
-                        </div>
-                        <div class="form-group row has-success">
-                            <label for="inputHorizontalSuccess" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control form-control-success" id="inputHorizontalSuccess" placeholder="name@example.com">
-                                <div class="form-control-feedback">Success! You've done it.</div>
-                                <small class="form-text text-muted">Example help text that remains unchanged.</small>
-                            </div>
-                        </div>
-                        <div class="form-group row has-warning">
-                            <label for="inputHorizontalWarning" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control form-control-warning" id="inputHorizontalWarning" placeholder="name@example.com">
-                                <div class="form-control-feedback">Shucks, check the formatting of that and try again.</div>
-                                <small class="form-text text-muted">Example help text that remains unchanged.</small>
-                            </div>
-                        </div>
-                        <div class="form-group row has-danger">
-                            <label for="inputHorizontalDnger" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control form-control-danger" id="inputHorizontalDnger" placeholder="name@example.com">
-                                <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
-                                <small class="form-text text-muted">Example help text that remains unchanged.</small>
-                            </div>
-                        </div>
+                                                        <label for="">لينك الصفحة</label>
+                                                        <input type="text" class="form-control" name="route_name" id="route_name">
+                                                        <label for="">رقم الترتيب</label>
+                                                        <input type="text" class="form-control" name="number_nav" id="number_nav">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">اغلاق</button>
+                                                        <button type="submit" class="btn btn-success waves-effect waves-light">حفظ</button>
+                                                    </div>
+                                                </form>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal-dialog -->
+                                        </div><!-- /.modal -->
+                                    <br>
+                                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>الكود</th>
+                                            <th>الاسم</th>
+                                            <th>عمليات</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $i = 0; ?>
+                                            @foreach ($nav as $x)
+                                                <?php $i++; ?>
+                                        <tr>
+                                            <td>{{ $i }}</td>
+                                            <td>{{ $x->name }}</td>
+                                            <td>Edinburgh</td>
+                                            <td>61</td>
+                                        </tr>
+
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+
                     </div>
                 </div>
             </div> <!-- end col -->
@@ -196,3 +111,14 @@
 
 </div> <!-- Page content Wrapper -->
 @endsection
+
+@section('js')
+{{-- <script src="{{ URL::asset('plugins/datatables/jquery.dataTables.min.js')}}"></script> --}}
+<script src="{{ URL::asset('plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{ URL::asset('plugins/datatables/dataTables.bootstrap4.min.js')}}"></script>
+<!-- Datatable init js -->
+<script src="{{ URL::asset('admin/en/assets/pages/datatables.init.js')}}"></script>
+<!-- App js -->
+<script src="{{ URL::asset('admin/en/assets/js/app.js')}}"></script>
+@endsection
+
