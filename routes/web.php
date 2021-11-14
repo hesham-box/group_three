@@ -14,14 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 require __DIR__.'/auth.php';
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-//
+Route::get('/', function () {
+   return view('welcome');
+});
+
 // Route::get('/dashboard', function () {
 //    return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
 
+// Route::group(
+//     [
+//         'prefix' => LaravelLocalization::setLocale(),
+//         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+//     ],function () {
+
+//     // Route::get('/', function () {return view('site.layouts.master');});
+//     Route::resource('/dashboard', admin_HomeController::class);
+
+
+// });
 
 // Route::resource('home','\App\Http\Controllers\HomeController');
 
