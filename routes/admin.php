@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-use App\Http\Controllers\admin_HomeController;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +24,8 @@ Route::group(
     ],function () {
 
     // Route::get('/', function () {return view('site.layouts.master');});
-    Route::resource('/dashboard', admin_HomeController::class);
-
+    Route::resource('/dashboard', Controllers\admin_HomeController::class);
+    Route::resource('/front', Controllers\HomeController::class);
 
 });
 

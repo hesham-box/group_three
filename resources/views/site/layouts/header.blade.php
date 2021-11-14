@@ -124,11 +124,11 @@
                 <div class="nav-wrap">
                   <nav class="main-navigation right">
                     <ul class="menu">
-                    @foreach ($nav_Data as $nav_Datas)
+                    {{-- @foreach ($nav_Data as $nav_Datas)
                         <li>
                         <a href="./index.html">{{$nav_Datas->name}}</a>
                       </li>
-                    @endforeach
+                    @endforeach --}}
                       {{-- {<li>
                         <a href="./index.html">الرئيسية</a>
                       </li> --}}
