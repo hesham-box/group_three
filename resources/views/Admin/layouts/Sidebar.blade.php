@@ -11,7 +11,18 @@
     <div class="sidebar-inner slimscrollleft">
         <div id="sidebar-menu">
             <ul>
-                <li class="menu-title">{{ trans('site.component') }}</li>
+
+                <li>
+                    <a href="{{ route('dashboard.index') }}" class="waves-effect">
+                        <h3>
+                            <i class="dripicons-home"></i>
+                        <span>{{ __('site.dashboard') }}
+                            <span class="badge badge-success badge-pill float-right"></span>
+                        </span>
+                        </h3>
+                    </a>
+                </li>
+                <li class="menu-title"><h5>{{ trans('site.component') }}</h5></li>
                 <li>
                     <a href="#" class="waves-effect">
                         <i class="dripicons-home"></i>

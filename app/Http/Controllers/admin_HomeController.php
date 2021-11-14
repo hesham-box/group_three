@@ -13,7 +13,7 @@ class admin_HomeController extends Controller
      */
     public function index()
     {
-        return view('Admin.layouts.master');
+        return view('dashboard');
     }
 
     /**
