@@ -25,13 +25,8 @@ Route::group(
 
     // Route::get('/', function () {return view('site.layouts.master');});
     Route::resource('/dashboard', Controllers\admin_HomeController::class);
-<<<<<<< HEAD
     Route::resource('navbar_data',Controllers\NavbarDetailsController::class);
-=======
     Route::resource('/users', Controllers\Admin\UsersController::class);
->>>>>>> b62a21b16aaf5d8f65fdac3be44aa0bfab69fac0
-
-
 });
 
 
