@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use App\Http\Controllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,21 +19,18 @@ Route::get('/', function () {
    return view('welcome');
 });
 
-// Route::get('/dashboard', function () {
-//    return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
 
-// Route::group(
-//     [
-//         'prefix' => LaravelLocalization::setLocale(),
-//         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
-//     ],function () {
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+    ],function () {
 
-//     // Route::get('/', function () {return view('site.layouts.master');});
-//     Route::resource('/dashboard', admin_HomeController::class);
+    // Route::get('/', function () {return view('site.layouts.master');});
+    Route::resource('front', App\Http\Controllers\HomeContoller::class);
 
 
-// });
+});
 
 // Route::resource('home','\App\Http\Controllers\HomeController');
 
