@@ -21,6 +21,7 @@ class adminseeder extends Seeder
             'name'     =>'wolf',
             'email'    =>'ahmedragabyasin2020@gmail.com',
             'password' =>bcrypt('258258258'),
+            // 'status'=>'active',
             // 'admin'    =>'1',
         ]);
         DB::table('users')->delete();
@@ -28,6 +29,9 @@ class adminseeder extends Seeder
             'name'     =>'ahmed',
             'email'    =>'ahmed@gmail.com',
             'password' =>bcrypt('258258258'),
+            'status'=>'active',
+            'phone'=>'01021493036',
+            'address'=>'Egypt',
             // 'admin'    =>'0',
         ]);
     }

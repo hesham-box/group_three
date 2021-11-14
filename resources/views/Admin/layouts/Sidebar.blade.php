@@ -12,6 +12,7 @@
         <div id="sidebar-menu">
             <ul>
 
+                {{-- home dashboard  --}}
                 <li>
                     <a href="{{ route('dashboard.index') }}" class="waves-effect">
                         <h3>
@@ -22,23 +23,29 @@
                         </h3>
                     </a>
                 </li>
+                {{-- End home dashboard  --}}
                 <li class="menu-title"><h5>{{ trans('site.component') }}</h5></li>
-                <li>
-                    <a href="#" class="waves-effect">
-                        <i class="dripicons-home"></i>
-                        <span>{{ trans('site.admins') }}
-                            <span class="badge badge-success badge-pill float-right"></span>
-                        </span>
-                    </a>
+               {{-- route Admin  --}}
+               <li>
+                <a href="#" class="waves-effect">
+                    <i class="ion ion-md-contacts"></i>
+                    <span>{{ trans('site.admins') }}
+                        <span class="badge badge-success badge-pill float-right"></span>
+                    </span>
+                </a>
                 </li>
+               {{-- End route Admin  --}}
+               {{--  route user till i make multi auth as soon as possible  --}}
                 <li>
-                    <a href="#" class="waves-effect">
-                        <i class="dripicons-home"></i>
+                    <a href="{{ route('users.index') }}" class="waves-effect">
+                        <i class="ion ion-md-contacts"></i>
                         <span>{{ trans('site.clients') }}
                             <span class="badge badge-success badge-pill float-right"></span>
                         </span>
                     </a>
                 </li>
+                {{--  End route user  --}}
+                {{-- route services   --}}
                 <li>
                     <a href="#" class="waves-effect">
                         <i class="dripicons-home"></i>
@@ -47,6 +54,7 @@
                         </span>
                     </a>
                 </li>
+                {{-- End route services   --}}
                 <li>
                     <a href="#" class="waves-effect">
                         <i class="dripicons-home"></i>
