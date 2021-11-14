@@ -42,11 +42,12 @@
                                 <td>{{ $user->phone }}</td>
                                 <td>{{ $user->address }}</td>
                                 <td>
-                                    <form action="{{ route('users.destroy', $user) }}" method="post">
+                                    <form action="{{ route('users.destroy', $user->id) }}" method="post">
                                         @csrf
                                         @method('delete')
-                                        <a href="{{ route('users.edit', $user) }}" class="btn btn-info">{{ __('Edit') }}</a>
-                                        <button type="button" class="btn btn-danger" onclick="confirm('{{ __('Are you sure you want to delete this user?') }}') ? this.parentElement.submit() : ''">
+                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-info">{{ __('Edit') }}</a>
+                                        <button type="button" class="btn btn-danger"
+                                        onclick="confirm('{{ __('Are you sure you want to delete this user?') }}') ? this.parentElement.submit() : ''">
                                             {{ __('Delete') }}
                                         </button>
                                     </form>
