@@ -10,7 +10,10 @@ return [
    'delete'=>'حذف',
    //    sidebar
    'dashboard'=>'الرئيسيه',
+   //admin
    'admins'=>'الادمن',
+    'Navbar Data'=>'بيانات الصفحات',
+   //end admin
    'permissions'=>'الصلاحيات',
    'clients'=>'العملاء',
    'component'=>'المكونات',

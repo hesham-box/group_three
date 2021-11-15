@@ -36,7 +36,28 @@ class NavbarDetailsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $validatedData = $request->validate([
+        //     'name' => 'required|unique:customers|max:255',
+
+        // ],[
+
+        //     'cus_name.required' =>'يرجي ادخال اسم ',
+        //     'cus_phone.required' =>'يرجي ادخال الهاتف ',
+        //     'cus_phone.unique' =>'الهاتف مسجل مسبقا',
+        // ]);
+
+
+        try {
+            $nav = new navbar_details();
+            $nav->name = ['en' => $request->Name_en, 'ar' => $request->Name];
+            $nav->route_name = $request->route_name;
+            $nav->save();
+            return redirect()->route('nav_data.index');
+        }
+
+        catch (\Exception $e){
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        }
     }
 
     /**

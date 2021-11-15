@@ -4,7 +4,7 @@
         <div class="col-lg-9">
             <div class="card m-b-30">
                 <div class="card-body">
-                    <h4 class="mt-0 header-title">{{ __('site.Edit_tracking_steps') }}</h4>
+                    <h4 class="mt-0 header-title">update tracking_steps</h4>
                     <a class="btn btn-primary btn-sm" style="margin: 10px;" href="{{ route('tracking_steps.index') }}">رجوع</a>
                     <form class="" action="{{ route('tracking_steps.update',$tracking_steps->id) }}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
@@ -27,8 +27,10 @@
                                    name="date" data-date-format="yyyy-mm-dd"  value="{{$tracking_steps->date }}">
 <br><br>
                             <div class="form-group">
-                                <div class="col-md-12 mb-3">
-                                    <button type="submit" class="btn btn-primary">Save</button>
+                                <div>
+                                    <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                        Save
+                                    </button>
                                 </div>
 
                             </div>

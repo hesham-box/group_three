@@ -14,8 +14,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $nav_Data=navbar_details::orderby('number_nav')->get();
-        return view('front',compact('nav_Data'));
+        // $nav_Data=navbar_details::orderby('number_nav')->get();
+        // return view('front',compact('nav_Data'));
     }
 
     /**

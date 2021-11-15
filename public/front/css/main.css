@@ -1,12 +1,12 @@
 /* ملف خاص بتعدل الفرونت الصفحه الرئيسيه وشكرا لكم */
 /* loader */
-.pageloader {
+/* .pageloader {
     transition: transform .1s ease-out,-webkit-transform .1s ease-out ;
 }
 
 .pageloader::after {
     animation: loader-figure .15s infinite cubic-bezier(.215,.61,.355,1);
-}
+} */
 .logo-text{
     color: #cf5029;
 }
@@ -17,7 +17,7 @@
     height: 500px;
     margin: auto;
     position: absolute;
-    right: 70px;
+    left: 10px;
     top: -215px;
 }
 /* end frame video */

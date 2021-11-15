@@ -947,8 +947,9 @@
                 <div id="rev_slider_1" class="rev_slider tp-overflow-hidden fullscreenbanner" data-version="5.4.7" style="display:none">
                   <a href="#welcome" class="slider-scroll-down">اقرأ المزيد</a>
                   <ul>
-                    <li data-transition="fade" data-thumb="./assets/images/icons/1.png" data-title="عملية التخزين" data-param1="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة." data-param2="./assets/images/icons/1.png">
-                      <img alt="Joo - Niche Multi-Purpose HTML Template" class="rev-slidebg" src="./assets/images/slider/4.png" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-kenburns="off" data-duration="30000" data-ease="Linear.easeNone"
+                    @foreach ( $servs as $serv)
+                    <li data-transition="fade" data-thumb="{{ asset('assets/images/slider_01.jpg') }}" data-title="{{ $serv->serve_name }}" data-param1="{{ $serv->desc }}." data-param2="{{ asset('uploads/serv/'.$serv->image) }} " >
+                      <img alt="Joo - Niche Multi-Purpose HTML Template" class="rev-slidebg" src="{{ asset('assets/images/slider_01.jpg') }}" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-kenburns="off" data-duration="30000" data-ease="Linear.easeNone"
                         data-scalestart="100" data-scaleend="115" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="15">
                       <div class="tp-caption tp-resizeme small_text top" data-x="right" data-hoffset="['405','405','0','0']" data-y="center" data-voffset="['-152','-152','-152','-152']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
                         data-responsive-offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1600,"to":"o:1;","delay":800,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
@@ -965,64 +966,9 @@
                         </span>
                       </a>
                     </li>
+                    @endforeach
                     <!-- slide -->
-                    <li data-transition="fade" data-thumb="./assets/images/icons/2.png" data-title="الشحن الجوي" data-param1="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة." data-param2="./assets/images/icons/2.png">
-                      <img alt="Joo - Niche Multi-Purpose HTML Template" class="rev-slidebg" src="./assets/images/slider/3.png" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-kenburns="off" data-duration="30000" data-ease="Linear.easeNone"
-                        data-scalestart="100" data-scaleend="115" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="15">
-                      <div class="tp-caption tp-resizeme small_text top" data-x="right" data-hoffset="['405','405','0','0']" data-y="center" data-voffset="['-152','-152','-152','-152']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
-                        data-responsive-offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1600,"to":"o:1;","delay":800,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
-                        data-textAlign="['right','right','right','right']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"> البضائع اللوجستية </div>
-                      <div class="tp-caption tp-resizeme large_text" data-x="right" data-hoffset="['405','405','0','0']" data-y="center" data-voffset="['-56','-56','-56','-56']" data-width="none" data-height="none" data-whitespace="nowrap"
-                        data-type="text" data-responsive-offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1600,"to":"o:1;","delay":1200,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
-                        data-textAlign="['right','right','right','right']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"> خدمات التوصيل المحلى والدولى
-                        <br> لكل عمليات النقل السريع. </div>
-                      <a class="tp-caption tp-resizeme button is-primary" href="#" data-frames='[{"delay":1600,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                        data-x="right" data-hoffset="['402','402','0','0']" data-y="center" data-voffset="['82','82','0','0']" data-type="button">
-                        <span>معرفة المزيد</span>
-                        <span class="icon is-small">
-                          <i class="ion-ios-arrow-round-forward"></i>
-                        </span>
-                      </a>
-                    </li>
-                    <!-- slide -->
-                    <li data-transition="fade" data-thumb="./assets/images/icons/3.png" data-title="الشحن البحري" data-param1="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة." data-param2="./assets/images/icons/3.png">
-                      <img alt="Joo - Niche Multi-Purpose HTML Template" class="rev-slidebg" src="./assets/images/slider/2.png" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-kenburns="off" data-duration="30000" data-ease="Linear.easeNone"
-                        data-scalestart="100" data-scaleend="115" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="15">
-                      <div class="tp-caption tp-resizeme small_text top" data-x="right" data-hoffset="['405','405','0','0']" data-y="center" data-voffset="['-152','-152','-152','-152']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
-                        data-responsive-offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1600,"to":"o:1;","delay":800,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
-                        data-textAlign="['right','right','right','right']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"> البضائع اللوجستية </div>
-                      <div class="tp-caption tp-resizeme large_text" data-x="right" data-hoffset="['405','405','0','0']" data-y="center" data-voffset="['-56','-56','-56','-56']" data-width="none" data-height="none" data-whitespace="nowrap"
-                        data-type="text" data-responsive-offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1600,"to":"o:1;","delay":1200,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
-                        data-textAlign="['right','right','right','right']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"> خدمات التوصيل المحلى والدولى
-                        <br> لكل عمليات النقل السريع. </div>
-                      <a class="tp-caption tp-resizeme button is-primary" href="#" data-frames='[{"delay":1600,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                        data-x="right" data-hoffset="['402','402','0','0']" data-y="center" data-voffset="['82','82','0','0']" data-type="button">
-                        <span>معرفة المزيد</span>
-                        <span class="icon is-small">
-                          <i class="ion-ios-arrow-round-forward"></i>
-                        </span>
-                      </a>
-                    </li>
-                    <!-- slide -->
-                    <li data-transition="fade" data-thumb="./assets/images/icons/4.png" data-title="النقل البري" data-param1="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة." data-param2="./assets/images/icons/4.png">
-                      <img alt="Joo - Niche Multi-Purpose HTML Template" class="rev-slidebg" src="./assets/images/slider/1.png" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-kenburns="off" data-duration="30000" data-ease="Linear.easeNone"
-                        data-scalestart="100" data-scaleend="115" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="15">
-                      <div class="tp-caption tp-resizeme small_text top" data-x="right" data-hoffset="['405','405','0','0']" data-y="center" data-voffset="['-152','-152','-152','-152']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
-                        data-responsive-offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1600,"to":"o:1;","delay":800,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
-                        data-textAlign="['right','right','right','right']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"> البضائع اللوجستية </div>
-                      <div class="tp-caption tp-resizeme large_text" data-x="right" data-hoffset="['405','405','0','0']" data-y="center" data-voffset="['-56','-56','-56','-56']" data-width="none" data-height="none" data-whitespace="nowrap"
-                        data-type="text" data-responsive-offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1600,"to":"o:1;","delay":1200,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
-                        data-textAlign="['right','right','right','right']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"> خدمات التوصيل المحلى والدولى
-                        <br> لكل عمليات النقل السريع. </div>
-                      <a class="tp-caption tp-resizeme button is-primary" href="#" data-frames='[{"delay":1600,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                        data-x="right" data-hoffset="['402','402','0','0']" data-y="center" data-voffset="['82','82','0','0']" data-type="button">
-                        <span>معرفة المزيد</span>
-                        <span class="icon is-small">
-                          <i class="ion-ios-arrow-round-forward"></i>
-                        </span>
-                      </a>
-                    </li>
-                    <!-- slide -->
+
                   </ul>
                 </div>
                 <!-- .rev_slider -->

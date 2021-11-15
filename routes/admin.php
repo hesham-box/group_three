@@ -1,3 +1,4 @@
+
 <?php
 
 use App\Http\Controllers\TrackingstepsController;
@@ -16,23 +17,30 @@ use App\Http\Controllers;
 |
 */
 
+
+
+
 require __DIR__ . '/auth.php';
 
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+        'middleware' => ['auth','localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ],function () {
+
 
     Route::resource('/dashboard', Controllers\admin_HomeController::class);
     //Route::resource('tracking_steps',[Tracking_stpeController::class]);
     Route::resource('/tracking_steps',TrackingstepsController::class);
 
 
+
+    Route::resource('navbar_data',Controllers\NavbarDetailsController::class);
+    Route::resource('/dashboard', Controllers\Admin\AdminsController::class);
+    Route::resource('/users', Controllers\Admin\UsersController::class);
+    Route::resource('/services',Controllers\Admin\ServiceController::class);
+    Route::resource('/feedbacks',Controllers\Admin\FeedbackController::class);
 });
-
-Route::resource('navbar_data','\App\Http\Controllers\NavbarDetailsController');
-
 
 
 

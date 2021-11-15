@@ -16,8 +16,8 @@ class CreateNavbarDetailsTable extends Migration
         Schema::create('navbar_details', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('route_name');
-            $table->integer('number_nav');
+            $table->string('route_name')->nullable();
+            $table->integer('number_nav')->nullable();
             $table->timestamps();
         });
     }

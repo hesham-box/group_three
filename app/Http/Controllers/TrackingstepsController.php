@@ -38,6 +38,8 @@ class TrackingstepsController extends Controller
             'track_name'=>$request->track_name,
             'date'=>$request->date,
         ]);
+        session()->flash('Add', 'tracking_step Add successfully');
+        return redirect('/tracking_steps');
     }
 
 
@@ -69,7 +71,7 @@ class TrackingstepsController extends Controller
 
         ]);
 
-        session()->flash('Edit', ' tracking_step update successfully  ');
+        session()->flash('Edit', '   ');
         return back();
     }
 
