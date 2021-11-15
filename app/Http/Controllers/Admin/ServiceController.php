@@ -5,7 +5,7 @@ use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\storeservices;
-
+use Illuminate\Support\Facades\File;
 class ServiceController extends Controller
 {
 
@@ -71,9 +71,10 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit($id)
     {
-        //
+        $serv = Service::find($id);
+        return view('admin.services.edit',compact('serv'));
     }
 
     /**
@@ -83,9 +84,32 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $service)
+    public function update(storeservices $request, $id)
     {
-        //
+        try{
+            $validated = $request->validated();
+            $serv = Service::find($id);
+            if($request->hasFile('image')){
+                $path = 'uploads/serv/' . $serv->image;
+                if(File::exists($path)){
+                    File::delete($path);
+                }
+                $file = $request->file('image');
+                $ext  = $file->getClientOriginalExtension();
+                $filename = time() . '.' . $ext ;
+                $file->move('uploads/serv',$filename);
+                $serv->image = $filename;
+            }
+            $serv->serve_name = ['en'=>$request->serve_name_en ,'ar'=>$request->serve_name];
+            $serv->desc = $request->desc;
+            $serv->status = $request->status==true?'1':'0';
+            $serv->update();
+            toastr()->success(__('services update successfully'));
+            return redirect()->route('services.index');
+        }
+        catch (\Exception $e){
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        }
     }
 
     /**
@@ -94,8 +118,21 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy($id)
     {
-        //
-    }
+        try{
+            $serv = Service::find($id);
+            if($serv->image != 'default.jpg'){
+                $path = 'uploads/serv/' . $serv->image;
+                if(File::exists($path)){
+                    File::delete($path);
+                }
+            }
+            $serv->delete();
+            toastr()->error(__('services delete successfully'));
+            return redirect()->route('services.index');
+        }catch (\Exception $e){
+                return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+            }
+        }
 }

@@ -15,9 +15,9 @@
                             <tr>
                                 <th>#</th>
                                 <th>{{ __('site.Service_name') }}</th>
-                                <th>{{ __('site.description') }}</th>
-                                <th>{{ __('site.status') }}</th>
                                 <th>{{ __('site.image') }}</th>
+                                <th>{{ __('site.status') }}</th>
+                                <th>{{ __('site.description') }}</th>
                                 <th>{{ __('site.action') }}</th>
                             </tr>
                         </thead>
@@ -37,7 +37,7 @@
                                     <form action="{{ route('services.destroy', $service->id) }}" method="post">
                                         @csrf
                                         @method('delete')
-                                        <a href="{{ route('users.edit', $service->id) }}" class="btn btn-info">{{ __('Edit') }}</a>
+                                        <a href="{{ route('services.edit', $service->id) }}" class="btn btn-info">{{ __('Edit') }}</a>
                                         <button type="button" class="btn btn-danger"
                                         onclick="confirm('{{ __('Are you sure you want to delete this service?') }}') ? this.parentElement.submit() : ''">
                                             {{ __('Delete') }}
