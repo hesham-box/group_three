@@ -7,7 +7,7 @@ use App\Http\Controllers;
 
 
 
-require __DIR__ . '/auth.php';
+
 
 Route::group(
     [
@@ -21,7 +21,7 @@ Route::group(
     Route::resource('/feedbacks',Controllers\Admin\FeedbackController::class);
 });
 
-
+require __DIR__ . '/auth.php';
 
 
 
