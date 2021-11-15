@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Feedback;
+use App\Models\Service;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class admin_HomeController extends Controller
@@ -13,7 +16,10 @@ class admin_HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $users = User::count();
+        $services = Service::count();
+        $feedback = Feedback::count();
+        return view('dashboard',compact('users','services','feedback'));
     }
 
     /**
