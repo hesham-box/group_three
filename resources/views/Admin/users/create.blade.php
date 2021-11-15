@@ -27,7 +27,7 @@
                                    placeholder="Password" name="password" />
                         </div>
                         <div class="m-t-10">
-                            <input type="password" class="form-control" 
+                            <input type="password" class="form-control"
                                    data-parsley-equalto="#pass2"
                                    placeholder="Re-Type Password" name="confirm-password" />
                         </div>
@@ -48,6 +48,7 @@
                     <div class="form-group">
                         <label>__('status')</label>
                         <select name="status"  class="form-control " style="height: calc(2.8rem + 7px); " >
+                            <option value="" readonly>----select status ----</option>
                             <option value="unactive">not active</option>
                             <option value="active">active</option>
                         </select>

@@ -17,10 +17,11 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        $servs = Service::orderBy('id','DESC')->limit(6)->get();
+        $servs = Service::orderBy('id','DESC')->limit(4)->get();
+        $services = Service::orderBy('id','DESC')->limit(6)->get();
         $feedbacks = Feedback::orderBy('id','DESC')->limit(6)->get();
         $nav_Data=navbar_details::orderby('number_nav')->get();
-        return view('/front',compact('servs','feedbacks','nav_Data'));
+        return view('/front',compact('servs','services','feedbacks','nav_Data'));
 
     }
 

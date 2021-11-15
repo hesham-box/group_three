@@ -125,7 +125,7 @@
               </div>
               <br>
               <div class="columns is-variable is-4 is-multiline boxes-style-2">
-                @foreach ( $servs as $serv)
+                @foreach ( $services as $serv)
                 <div class="column is-4" >
                     <div class="box-item">
                     <a href="#">
