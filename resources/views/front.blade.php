@@ -111,7 +111,7 @@
             </div>
           </div>
         </section>
-        {{-- services section ahmed ragab --}}
+        {{-- services section  --}}
         <section id="services" class="section services-section has-background-primary-light is-clearfix">
             <div class="container">
               <div class="columns is-variable is-multiline is-4">
@@ -145,51 +145,58 @@
               </div>
             </div>
           </section>
-        {{-- End services section ahmed ragab --}}
+        {{-- End services section --}}
+        {{-- video section  --}}
         <section class="section watch-video is-clearfix">
-          <div class="container">
-            <br>
-            <br>
-            <div class="columns is-variable is-8 is-multiline">
-              <div class="column is-6-desktop is-12-tablet has-text-centered" data-aos="fade-up">
-                <div class="works-latest">
-                  <div class="works-latest-item">
-                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/global/introduction.png">
-                    <div class="works-latest-item-icon style-2">
-                      <a href="https://www.youtube.com/watch?v=jc4y2Xqerj0" class="mfp-lightbox mfp-iframe">
-                        <span class="icon ripple-effect">
-                          <i class="ion-ios-play"></i>
-                        </span>
-                      </a>
+            <div class="container">
+              <br>
+              <br>
+              <div class="columns is-variable is-8 is-multiline">
+                <div class="column is-6-desktop is-12-tablet has-text-centered" >
+                  <div class="works-latest">
+                    <div class="works-latest-item">
+                      {{-- <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/global/introduction.png"> --}}
+                      <div class="works-latest-item-icon style-2">
+                          {{-- تم اضافه فريم فيديو --}}
+                          <iframe class="mfp-lightbox mfp-iframe " width="500" height="200" src="https://www.youtube.com/embed/jHGzIrM4UbA"
+                                  frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen>
+                          </iframe>
+                        {{-- <a href="https://www.youtube.com/watch?v=jc4y2Xqerj0" class="mfp-lightbox mfp-iframe"> --}}
+                          {{-- <span class="icon ripple-effect">
+                            <i class="ion-ios-play"></i>
+                          </span> --}}
+                        {{-- </a> --}}
+                      </div>
+                      <!-- .works-latest-icon -->
                     </div>
-                    <!-- .works-latest-icon -->
+                    <!-- .works-latest-item -->
                   </div>
-                  <!-- .works-latest-item -->
+                </div>
+                <div class="column is-6-desktop is-12-tablet" >
+                  <br>
+                  <h1 class="heading-title style-3 has-text-left"> خدمات النقل المحلية اللوجستية
+                    <br> لانواع الشحن
+                    <span class="has-text-primary">والنقل.</span>
+                  </h1>
+                  <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى حيث يمكنك أن تولد.</p>
+                  <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى أنه مازال نصاً.</p>
+                  <br>
+                  <div class="level">
+                    <div class="level-left">
+                      <h4>محمد سعد
+                        <br>
+                        <span>المدير التنفيذى</span>
+                      </h4>
+                    </div>
+                    <div class="level-right">
+                      <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{ asset('front/images/global/mark.png') }}"> </div>
+                  </div>
                 </div>
               </div>
-              <div class="column is-6-desktop is-12-tablet" data-aos="fade">
-                <br>
-                <h1 class="heading-title style-3 has-text-left"> خدمات النقل المحلية اللوجستية
-                  <br> لانواع الشحن
-                  <span class="has-text-primary">والنقل.</span>
-                </h1>
-                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى حيث يمكنك أن تولد.</p>
-                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى أنه مازال نصاً.</p>
-                <br>
-                <div class="level">
-                  <div class="level-left">
-                    <h4>محمد سعد
-                      <br>
-                      <span>المدير التنفيذى</span>
-                    </h4>
-                  </div>
-                  <div class="level-right">
-                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/global/mark.png"> </div>
-                </div>
-              </div>
-            </div>
-            <br> </div>
-        </section>
+              <br> </div>
+          </section>
+        {{-- End video section  --}}
+
         <section class="hero fun-facts is-clearfix">
           <div class="hero-body">
             <h2 class="display-none">funfacts</h2>
@@ -338,16 +345,16 @@
             <p class="heading-title-top has-text-centered">آراء العملاء</p>
             <h1 class="heading-title style-3">قالوا عنا</h1>
             <div class="testimonials  owl-carousel dots carousel-items-3 columns-style-1 ">
-            @foreach ($feedbacks as $feedback)
-              <div class="testimonials-item">
-                <p>{{ $feedback->feedback }}</p>
-                <img alt="no photo" src="{{ asset('uploads/user-img/'. $feedback->users->image) }}">
-                <h3>{{ $feedback->users->name }}
-                  <br>
-                  <span>{{ $feedback->services->serve_name}} Services</span>
-                </h3>
-              </div>
-            @endforeach
+                @foreach ($feedbacks as $feedback)
+                <div class="testimonials-item">
+                    <p>{{ $feedback->feedback }}</p>
+                    <img alt="no photo" src="{{ asset('uploads/user-img/'. $feedback->users->image) }}">
+                    <h3>{{ $feedback->users->name }}
+                    <br>
+                    <span>{{ $feedback->services->serve_name}} Services</span>
+                    </h3>
+                </div>
+                @endforeach
             </div>
           </div>
         </section>
@@ -427,7 +434,7 @@
                 <br>
                 <br>
                 <br>
-                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/global/man.png"> </div>
+                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{ asset('front/images/global/man.png') }}"> </div>
             </div>
           </div>
         </section>
