@@ -54,7 +54,7 @@
                 {{--  End route user  --}}
                 {{--  route feedback   --}}
                 <li>
-                <a href="#" class="waves-effect">
+                <a href="{{ route('feedbacks.index') }}" class="waves-effect">
                     <i class="ion ion-md-recording"></i>
                     <span>{{ trans('site.feedback') }}
                         <span class="badge badge-success badge-pill float-right"></span>

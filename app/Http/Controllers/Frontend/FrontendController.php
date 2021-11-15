@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Feedback;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Models\navbar_details;
@@ -17,9 +18,10 @@ class FrontendController extends Controller
     public function index()
     {
         $servs = Service::orderBy('id','DESC')->limit(6)->get();
+        $feedbacks = Feedback::orderBy('id','DESC')->limit(6)->get();
         $nav_Data=navbar_details::orderby('number_nav')->get();
-        return view('/front',compact('servs','nav_Data'));
-       
+        return view('/front',compact('servs','feedbacks','nav_Data'));
+
     }
 
     /**

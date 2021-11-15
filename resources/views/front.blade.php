@@ -262,7 +262,7 @@
         <section id="news" class="section news-section is-clearfix">
           <div class="container">
             <div class="blog-list style-2 columns is-variable is-4 is-multiline">
-              <div class="column is-4" data-aos="fade">
+              <div class="column is-4" >
                 <div class="blog-post-heading">
                   <p class="heading-title-top">أخر الاخبار</p>
                   <h1 class="heading-title style-3 has-text-left"> اتم نقل الباضائع
@@ -277,7 +277,7 @@
                 </div>
                 <!-- .blog-post -->
               </div>
-              <div class="column is-4" data-aos="fade">
+              <div class="column is-4" >
                 <article class="blog-post">
                   <figure class="post-image">
                     <a href="./blog/single.html">
@@ -303,7 +303,7 @@
                 </article>
                 <!-- .blog-post -->
               </div>
-              <div class="column is-4" data-aos="fade">
+              <div class="column is-4" >
                 <article class="blog-post">
                   <figure class="post-image">
                     <a href="./blog/single.html">
@@ -332,86 +332,26 @@
             </div>
           </div>
         </section>
+         {{-- start client feedback --}}
         <section id="testimonials" class="section testimonials-section has-background-primary-light is-clearfix">
           <div class="container">
             <p class="heading-title-top has-text-centered">آراء العملاء</p>
             <h1 class="heading-title style-3">قالوا عنا</h1>
             <div class="testimonials  owl-carousel dots carousel-items-3 columns-style-1 ">
+            @foreach ($feedbacks as $feedback)
               <div class="testimonials-item">
-                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/1.png">
-                <h3>محمد أحمد
+                <p>{{ $feedback->feedback }}</p>
+                <img alt="no photo" src="{{ asset('uploads/user-img/'. $feedback->users->image) }}">
+                <h3>{{ $feedback->users->name }}
                   <br>
-                  <span>CEO & stylist</span>
+                  <span>{{ $feedback->services->serve_name}} Services</span>
                 </h3>
               </div>
-              <div class="testimonials-item">
-                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/2.png">
-                <h3>olivia allison
-                  <br>
-                  <span>CEO & stylist</span>
-                </h3>
-              </div>
-              <div class="testimonials-item">
-                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/3.png">
-                <h3>olivia allison
-                  <br>
-                  <span>CEO & stylist</span>
-                </h3>
-              </div>
-              <div class="testimonials-item">
-                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/1.png">
-                <h3>محمد أحمد
-                  <br>
-                  <span>CEO & stylist</span>
-                </h3>
-              </div>
-              <div class="testimonials-item">
-                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/2.png">
-                <h3>olivia allison
-                  <br>
-                  <span>CEO & stylist</span>
-                </h3>
-              </div>
-              <div class="testimonials-item">
-                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/3.png">
-                <h3>olivia allison
-                  <br>
-                  <span>CEO & stylist</span>
-                </h3>
-              </div>
-              <div class="testimonials-item">
-                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/1.png">
-                <h3>محمد أحمد
-                  <br>
-                  <span>CEO & stylist</span>
-                </h3>
-              </div>
-              <div class="testimonials-item">
-                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/2.png">
-                <h3>olivia allison
-                  <br>
-                  <span>CEO & stylist</span>
-                </h3>
-              </div>
-              <div class="testimonials-item">
-                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/3.png">
-                <h3>olivia allison
-                  <br>
-                  <span>CEO & stylist</span>
-                </h3>
-              </div>
+            @endforeach
             </div>
           </div>
         </section>
+        {{-- end client feedback --}}
         <section id="quote" class="section quote-section padding-bottom-none is-clearfix">
           <div class="container">
             <div class="columns is-variable is-2 is-multiline">
