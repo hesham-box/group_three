@@ -54,7 +54,7 @@
                 {{--  End route user  --}}
                 {{-- route services   --}}
                 <li>
-                    <a href="#" class="waves-effect">
+                    <a href="{{ route('services.index') }}" class="waves-effect">
                         <i class="dripicons-home"></i>
                         <span>{{ trans('site.serv') }}
                             <span class="badge badge-success badge-pill float-right"></span>

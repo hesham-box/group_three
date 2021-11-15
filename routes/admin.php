@@ -28,6 +28,7 @@ Route::group(
     Route::resource('/dashboard', Controllers\admin_HomeController::class);
     Route::resource('navbar_data',Controllers\NavbarDetailsController::class);
     Route::resource('/users', Controllers\Admin\UsersController::class);
+    Route::resource('/services',Controllers\Admin\ServiceController::class);
 });
 
 
