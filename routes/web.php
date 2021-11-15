@@ -27,7 +27,7 @@ Route::group(
     ],function () {
 
     // Route::get('/', function () {return view('site.layouts.master');});
-    Route::resource('/front', Controllers\HomeController::class);
+    Route::resource('/front', Controllers\Frontend\FrontendController::class);
 
 
 });

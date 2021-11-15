@@ -52,6 +52,16 @@
                     </a>
                 </li>
                 {{--  End route user  --}}
+                {{--  route feedback   --}}
+                <li>
+                <a href="#" class="waves-effect">
+                    <i class="ion ion-md-recording"></i>
+                    <span>{{ trans('site.feedback') }}
+                        <span class="badge badge-success badge-pill float-right"></span>
+                    </span>
+                </a>
+                </li>
+                {{-- End route feedback   --}}
                 {{-- route services   --}}
                 <li>
                     <a href="{{ route('services.index') }}" class="waves-effect">
@@ -62,6 +72,8 @@
                     </a>
                 </li>
                 {{-- End route services   --}}
+
+
                 <li>
                     <a href="#" class="waves-effect">
                         <i class="dripicons-home"></i>
@@ -74,14 +86,6 @@
                     <a href="#" class="waves-effect">
                         <i class="dripicons-home"></i>
                         <span>{{ trans('site.Products') }}
-                            <span class="badge badge-success badge-pill float-right"></span>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="waves-effect">
-                        <i class="fa fa-signing"></i>
-                        <span>{{ trans('site.feedback') }}
                             <span class="badge badge-success badge-pill float-right"></span>
                         </span>
                     </a>
