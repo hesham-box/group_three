@@ -1,12 +1,13 @@
 <?php
 
+use App\Http\Controllers\TrackingstepsController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| admin Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -23,9 +24,10 @@ Route::group(
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ],function () {
 
-    // Route::get('/', function () {return view('site.layouts.master');});
     Route::resource('/dashboard', Controllers\admin_HomeController::class);
-   
+    //Route::resource('tracking_steps',[Tracking_stpeController::class]);
+    Route::resource('/tracking_steps',TrackingstepsController::class);
+
 
 });
 

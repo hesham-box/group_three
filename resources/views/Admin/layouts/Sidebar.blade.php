@@ -61,7 +61,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="waves-effect">
+                    <a href="{{ route('tracking_steps.index') }}" class="waves-effect">
                         <i class="dripicons-home"></i>
                         <span>{{ trans('site.tracking-steps') }}
                             <span class="badge badge-success badge-pill float-right"></span>
