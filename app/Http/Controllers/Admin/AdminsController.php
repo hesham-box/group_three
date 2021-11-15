@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Feedback;
+use App\Models\Service;
+use App\Models\User;
 
 class AdminsController extends Controller
 {
@@ -14,7 +17,10 @@ class AdminsController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::count();
+        $services = Service::count();
+        $feedback = Feedback::count();
+        return view('dashboard',compact('users','services','feedback'));
     }
 
     /**
