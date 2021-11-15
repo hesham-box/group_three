@@ -120,7 +120,7 @@
                   <h1 class="heading-title style-3 has-text-left">خدماتنا الخاصة</h1>
                 </div>
                 <div class="column is-7-desktop is-12-tablet">
-                  <p class="heading-title-bottom">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى حيث يمكنك أن تولد. هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة.</p>
+                  <p class="heading-title-bottom">خدمتنا تتحدث عننا ونحتاج الى ارائكم واقتراحتكم شكرااا جزيلا لكم فريق <strong style="color:rgb(240, 29, 29);font-size:30px;font-weight:bold;">مورا سوفت</strong></p>
                 </div>
               </div>
               <br>

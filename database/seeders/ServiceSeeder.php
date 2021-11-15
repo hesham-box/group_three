@@ -34,6 +34,24 @@ class ServiceSeeder extends Seeder
         $serv->desc = 'we make best offers for you';
         $serv->status = 1;
         $serv->save();
+        $serv = new Service();
+        $serv->serve_name = ['en'=>'warehousing','ar'=>'نقل برى'];
+        $serv->image = 'default.jpg';
+        $serv->desc = 'يوجد لدينا خدمات متعدده';
+        $serv->status = 1;
+        $serv->save();
+        $serv = new Service();
+        $serv->serve_name = ['en'=>'Air Freight','ar'=>'نقل جوى'];
+        $serv->image = 'default.jpg';
+        $serv->desc = 'we have multi services';
+        $serv->status = 1;
+        $serv->save();
+        $serv = new Service();
+        $serv->serve_name = ['en'=>'Ocean Freight','ar'=>'نقل بحرى'];
+        $serv->image = 'default.jpg';
+        $serv->desc = 'we make best offers for you';
+        $serv->status = 1;
+        $serv->save();
         // $services = [
         //     ['en'=> 'xxxxxxxxxxx', 'ar'=> 'نقل برى','default.jpg','desc1',1],
         //     ['en'=> 'ccccccccccccc', 'ar'=> 'نقل جوى','default.jpg','desc1',1],
