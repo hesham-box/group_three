@@ -26,12 +26,12 @@
                 {{-- End home dashboard  --}}
                 <li class="menu-title"><h5>{{ trans('site.component') }}</h5></li>
                 <li class="has_sub">
-                    <a href="#" class="waves-effect"><i class="dripicons-home"></i><span>{{ trans('site.admins') }}<span class="menu-arrow float-right "></span>
-                        </span>
-                    </a>
-                    <ul class="list-unstyled">
-                        <li><a href="navbar_data">{{ trans('site.Navbar-Data') }}</a></li>
-                    </ul>
+                <a href="#" class="waves-effect"><i class="dripicons-home"></i>
+                    <span>{{ trans('site.navbar') }}<span class="menu-arrow float-right "></span></span>
+                </a>
+                <ul class="list-unstyled">
+                    <li><a href="navbar_data">{{ trans('site.Navbar-Data') }}</a></li>
+                </ul>
                {{-- route Admin  --}}
                <li>
                 <a href="#" class="waves-effect">
@@ -72,37 +72,24 @@
                     </a>
                 </li>
                 {{-- End route services   --}}
-
-
-                <li>
+                {{-- <li>
                     <a href="#" class="waves-effect">
                         <i class="dripicons-home"></i>
                         <span>{{ trans('site.categories') }}
                             <span class="badge badge-success badge-pill float-right"></span>
                         </span>
                     </a>
-                </li>
-                <li>
+                </li> --}}
+                {{-- <li>
                     <a href="#" class="waves-effect">
                         <i class="dripicons-home"></i>
                         <span>{{ trans('site.Products') }}
                             <span class="badge badge-success badge-pill float-right"></span>
                         </span>
                     </a>
-                </li>
-                <li>
-                    <a href="#" class="waves-effect">
-
-                        <i class="fa fa-signing"></i>
-                        <span>{{ trans('site.feedback') }}
-                            <span class="badge badge-success badge-pill float-right"></span>
-                        </span>
-                    </a>
-                </li>
+                </li> --}}
                 <li>
                     <a href="{{ route('tracking_steps.index') }}" class="waves-effect">
-
-
                         <i class="dripicons-home"></i>
                         <span>{{ trans('site.tracking-steps') }}
                             <span class="badge badge-success badge-pill float-right"></span>
