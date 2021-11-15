@@ -30,7 +30,7 @@
                         </span>
                     </a>
                     <ul class="list-unstyled">
-                        <li><a href="navbar_data">{{ trans('site.Navbar Data') }}</a></li>
+                        <li><a href="navbar_data">{{ trans('site.Navbar-Data') }}</a></li>
                     </ul>
                {{-- route Admin  --}}
                <li>
@@ -45,7 +45,7 @@
                {{--  route user till i make multi auth as soon as possible  --}}
                 <li>
                     <a href="{{ route('users.index') }}" class="waves-effect">
-                        <i class="ion ion-md-contacts"></i>
+                        <i class="ion ion-md-albums"></i>
                         <span>{{ trans('site.clients') }}
                             <span class="badge badge-success badge-pill float-right"></span>
                         </span>
@@ -65,7 +65,7 @@
                 {{-- route services   --}}
                 <li>
                     <a href="{{ route('services.index') }}" class="waves-effect">
-                        <i class="dripicons-home"></i>
+                        <i class="ion ion-md-airplane"></i>
                         <span>{{ trans('site.serv') }}
                             <span class="badge badge-success badge-pill float-right"></span>
                         </span>
