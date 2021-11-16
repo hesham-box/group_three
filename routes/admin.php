@@ -13,7 +13,7 @@ Route::group(
         'middleware' => ['auth','localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ],function () {
 
-        Route::get('adminlogin', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+        // Route::get('adminlogin', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
         Route::resource('/dashboard', Controllers\Admin\AdminsController::class);
 
         Route::resource('navbar_data',Controllers\NavbarDetailsController::class);

@@ -25,13 +25,13 @@ class AdminCotroller extends Controller
     //     return redirect()->intended(RouteServiceProvider::ADMIN);
     // }
 
-    public function showLoginForm()
-    {
-        if (Auth::guard('admin')->check()) {
-            // return redirect()->route('dashboard.index');
-            return redirect()->intended(RouteServiceProvider::ADMIN);
-        } else {
-            return view('auth.login');
-        }
-    }
+    // public function showLoginForm()
+    // {
+    //     if (Auth::guard('admin')->check()) {
+    //         // return redirect()->route('dashboard.index');
+    //         return redirect()->intended(RouteServiceProvider::ADMIN);
+    //     } else {
+    //         return view('auth.login');
+    //     }
+    // }
 }
