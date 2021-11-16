@@ -29,11 +29,11 @@ Route::group(
     // Route::resource('/services',Controllers\Admin\ServiceController::class);
 
 
-    Route::resource('/events',Controllers\Admin\EventController::class);
+        Route::resource('/events',Controllers\Admin\EventController::class);
+        Route::resource('/agreements',Controllers\Admin\AgreementController::class);
 
 
-    // Route::resource('/agreements',Controllers\Admin\AgreementController::class);
-    Route::resource('/feedbacks',Controllers\Admin\FeedbackController::class);
+        Route::resource('/feedbacks',Controllers\Admin\FeedbackController::class);
         Route::resource('navbar_data',Controllers\NavbarDetailsController::class);
         Route::resource('/users', Controllers\Admin\UsersController::class);
         Route::resource('/services',Controllers\Admin\ServiceController::class);

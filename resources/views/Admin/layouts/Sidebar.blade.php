@@ -80,7 +80,7 @@
                         </span>
                     </a>
                 </li> --}}
-                {{-- <li>
+                 {{-- <li>
                     <a href="#" class="waves-effect">
                         <i class="dripicons-home"></i>
                         <span>{{ trans('site.Products') }}
@@ -88,7 +88,7 @@
                         </span>
                     </a>
 
-                </li>
+                </li> --}}
                 <li>
                     <a href="{{ route('agreements.index') }}" class="waves-effect">
                         <i class="dripicons-home"></i>
@@ -97,17 +97,8 @@
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="waves-effect">
 
-                        <i class="fa fa-signing"></i>
-                        <span>{{ trans('site.feedback') }}
-                            <span class="badge badge-success badge-pill float-right"></span>
-                        </span>
-                    </a>
                 </li>
-
-                </li> --}}
 
                 <li>
                     <a href="{{ route('events.index') }}" class="waves-effect">

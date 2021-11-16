@@ -16,7 +16,7 @@ Route::group(
     Route::resource('/front', Controllers\Frontend\FrontendController::class);
 
     Route::post('/sendrequest', [Controllers\Frontend\UserReqestController::class,'sendrequest'])->name('sendrequest');
-    // Route::post('/sendrequest', 'Controllers\Frontend\UserReqestController@sendrequest');
+
 
 });
 
