@@ -25,7 +25,8 @@
                             <label for="title">date</label>
                             <input class="form-control" type="text"  id="datepicker-action"
                                    name="date" data-date-format="yyyy-mm-dd"  value="{{$tracking_steps->date }}">
-<br><br>
+                              <br><br>
+                              
                             <div class="form-group">
                                 <div>
                                     <button type="submit" class="btn btn-primary waves-effect waves-light">

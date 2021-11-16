@@ -42,15 +42,6 @@ class TrackingstepsController extends Controller
         return redirect('/tracking_steps');
     }
 
-
-
-    public function show(tracking_steps $tracking_steps )
-    {
-
-    }
-
-
-
     public function edit( $id)
     {
 

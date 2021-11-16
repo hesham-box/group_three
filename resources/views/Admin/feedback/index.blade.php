@@ -14,7 +14,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>{{ __('site.username') }}</th>
+                                <th>{{ __('site.name') }}</th>
                                 <th>{{ __('site.services') }}</th>
                                 <th>{{ __('site.feedback') }}</th>
                                 <th>{{ __('site.action') }}</th>
