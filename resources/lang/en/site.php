@@ -8,6 +8,7 @@ return [
    'create'=>'Create',
    'edit'=>'Edit',
    'delete'=>'Delete',
+   'back'=>'Back',
    //    sidebar
    'dashboard'=>'Dashboard',
    //admin
@@ -51,5 +52,19 @@ return [
 'required_en'=>'please write english language',
 'desc_required'=>'please enter services description',
 // end dashboard service page translation
+// start users page translation
+'name'=>'Name',
+'email'=>'Email',
+'status'=>'Status',
+'phone'=>'Phone',
+'password'=>'Password',
+'address'=>'Address',
+'users-data'=>'Users Data',
+'add-user'=>'Add New User',
+
+'edit-user'=>' Edit User',
+
+
+// end users page translation
 
 ];

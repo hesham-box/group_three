@@ -5,7 +5,7 @@
     <div class="col-lg-12">
         <div class="card m-b-30">
             <div class="card-body">
-                <h4 class="mt-0 header-title">table users</h4>
+                <h4 class="mt-0 header-title">{{ __('site.services') }}</h4>
                 <div class="col-md-6 mb-3">
                     <a href="{{ route('services.create') }}"  class="btn btn-primary btn-block"><i class="fa fa-user-circle"></i> Add service</a>
                 </div>
@@ -37,10 +37,10 @@
                                     <form action="{{ route('services.destroy', $service->id) }}" method="post">
                                         @csrf
                                         @method('delete')
-                                        <a href="{{ route('services.edit', $service->id) }}" class="btn btn-info">{{ __('Edit') }}</a>
+                                        <a href="{{ route('services.edit', $service->id) }}" class="btn btn-info">{{ __('site.edit') }}</a>
                                         <button type="button" class="btn btn-danger"
                                         onclick="confirm('{{ __('Are you sure you want to delete this service?') }}') ? this.parentElement.submit() : ''">
-                                            {{ __('Delete') }}
+                                            {{ __('site.delete') }}
                                         </button>
                                     </form>
                                 </td>

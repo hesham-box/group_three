@@ -5,22 +5,22 @@
     <div class="col-lg-12">
         <div class="card m-b-30">
             <div class="card-body">
-                <h4 class="mt-0 header-title">table users</h4>
+                <h4 class="mt-0 header-title">{{ __('site.users-data') }}</h4>
                 <div class="col-md-6 mb-3">
-                    <a href="{{ route('users.create') }}"  class="btn btn-primary btn-block"><i class="fa fa-user-circle"></i> Add User</a>
+                    <a href="{{ route('users.create') }}"  class="btn btn-primary btn-block"><i class="fa fa-user-circle"></i> {{ __('site.add-user') }}</a>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-striped mb-0">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
-                                <th>email</th>
-                                <th>image</th>
-                                <th>status</th>
-                                <th>phone</th>
-                                <th>address</th>
-                                <th>action</th>
+                                <th>{{ __('site.name') }}</th>
+                                <th>{{ __('site.email') }}</th>
+                                <th>{{ __('site.image') }}</th>
+                                <th>{{ __('site.status') }}</th>
+                                <th>{{ __('site.phone') }}</th>
+                                <th>{{ __('site.address') }}</th>
+                                <th>{{ __('site.action') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -45,10 +45,10 @@
                                     <form action="{{ route('users.destroy', $user->id) }}" method="post">
                                         @csrf
                                         @method('delete')
-                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-info">{{ __('Edit') }}</a>
+                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-info">{{ __('site.edit') }}</a>
                                         <button type="button" class="btn btn-danger"
                                         onclick="confirm('{{ __('Are you sure you want to delete this user?') }}') ? this.parentElement.submit() : ''">
-                                            {{ __('Delete') }}
+                                            {{ __('site.delete') }}
                                         </button>
                                     </form>
                                 </td>

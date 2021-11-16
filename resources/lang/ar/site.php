@@ -8,7 +8,8 @@ return [
    'create'=>'اضف',
    'edit'=>'تعديل',
    'delete'=>'حذف',
-   //    sidebar
+   'back'=>'رجوع',
+//    sidebar
    'dashboard'=>'الرئيسيه',
    //admin
    'admins'=>'الادمن',
@@ -49,5 +50,19 @@ return [
 'required_en'=>'يرجي ادخال اسم الخدمه باللغة الانجليزية',
 'desc_required'=>'يرجى كتابه وصف الخدمه',
 // end dashboard service page translatio
+// start users page translation
+'name'=>'الاسم',
+'email'=>'الايميل',
+'status'=>'الحاله',
+'phone'=>'الهاتف',
+'password'=>'باسورد',
+'address'=>'العنوان',
+'users-data'=>'بيانات العملاء',
+'add-user'=>'اضف عميل',
+
+'edit-user'=>' تعديل بيانات العميل',
+
+
+// end users page translation
 
 ];

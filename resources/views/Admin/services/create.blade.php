@@ -5,8 +5,8 @@
     <div class="col-lg-9">
         <div class="card m-b-30">
             <div class="card-body">
-                <h4 class="mt-0 header-title">create new services</h4>
-                <a class="btn btn-primary btn-sm" style="margin: 10px;" href="{{ route('services.index') }}">رجوع</a>
+                <h4 class="mt-0 header-title">{{ __('site.Add_Service') }}</h4>
+                <a class="btn btn-primary btn-sm" style="margin: 10px;" href="{{ route('services.index') }}">{{ __('site.back') }}</a>
                 <form class="" action="{{route('services.store')}}" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <div class="form-group">
