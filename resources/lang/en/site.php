@@ -26,6 +26,10 @@ return [
 //    end sidebar
 // start dashboard service page translation
 'service_name_en'=>'Service Name',
+'event_title_en'=>'event_title',
+'agreement_title'=>'agreement_title',
+'agreement_title_en'=>'agreement_title',
+'event_title'=>'event_title',
 'services'=>'Services',
 'services_page'=>'Services Page',
 'Add_Service'=>'Add Service',
