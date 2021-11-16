@@ -1,4 +1,8 @@
 @extends('site.layouts.master')
+
+@section('css')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+@endsection
 @section('content')
  <!-- import content layouts and modules -->
         <!-- import content layouts and modules -->
@@ -362,7 +366,7 @@
         <section id="quote" class="section quote-section padding-bottom-none is-clearfix">
           <div class="container">
             <div class="columns is-variable is-2 is-multiline">
-              <div class="column is-6-desktop is-12-tablet" data-aos="fade">
+              <div class="column is-6-desktop is-12-tablet" >
                 <h1 class="heading-title style-3 has-text-left"> طلب
                   <span class="has-text-primary">عرض أسعار</span>
                 </h1>
@@ -378,17 +382,21 @@
                     <i class="ion-md-notifications"></i>
                   </span> ! حدث خطأ ما ، لم نتمكن من إرسال رسالتك. </div>
                 <!-- ajax contact form -->
-                <form accept-charset="UTF-8" class="ajax-contact-form" action="https://usebasin.com/f/3587049dbc33.json" method="POST">
+                {{-- <form accept-charset="UTF-8" class="ajax-contact-form" action="{{ route('sendrequest') }}" method="POST"> --}}
+                <form accept-charset="UTF-8" class="ajax-contact-form" id="ajaxform" method="POST">
+                    {{csrf_field()}}
                   <div class="field is-horizontal">
                     <div class="field-body">
                       <div class="field">
                         <div class="control is-expanded">
-                          <input class="input" type="text" name="name" placeholder="الإسم" required> </div>
+                          <input class="input" type="text" name="name" placeholder="الإسم" required>
+                        </div>
                       </div>
                       <!-- .field -->
                       <div class="field">
                         <div class="control is-expanded">
-                          <input class="input" type="email" name="email" placeholder="الإيميل" required=""> </div>
+                          <input class="input" type="email" name="email" placeholder="الإيميل" required>
+                        </div>
                       </div>
                       <!-- .field -->
                     </div>
@@ -398,17 +406,18 @@
                     <div class="field-body">
                       <div class="field">
                         <div class="control is-expanded">
-                          <input class="input" type="text" name="subject" placeholder="العنوان" required=""> </div>
+                          <input class="input" type="text" name="subject" placeholder="العنوان" required>
+                        </div>
                       </div>
                       <!-- .field -->
                       <div class="field">
                         <div class="control is-expanded">
-                          <div class="select">
+                          <div class="select" name="serv_id">
                             <select>
-                              <option>الشحن الجوي</option>
-                              <option> النقل البري</option>
-                              <option>  الشحن البحري</option>
-                              <option>التخزين</option>
+                                <option readonly >--Chosse Your Services--</option>
+                                @foreach ($allservices as $serv )
+                                <option value="{{ $serv->id }}">{{ $serv->serve_name }}</option>
+                                @endforeach
                             </select>
                           </div>
                         </div>
@@ -419,17 +428,17 @@
                   </div>
                   <div class="field ">
                     <div class="control is-expanded">
-                      <textarea class="textarea" name="textarea" placeholder="رسالتك" required=""></textarea>
+                      <textarea class="textarea" name="sms" placeholder="رسالتك" required></textarea>
                     </div>
                   </div>
                   <div class="field ">
                     <div class="control">
-                      <button class="button" type="submit">اطلب الآن</button>
+                      <button class="button save-data" type="submit">اطلب الآن</button>
                     </div>
                   </div>
                 </form>
               </div>
-              <div class="column is-6-desktop is-12-tablet" data-aos="fade-up" data-aos-delay="600">
+              <div class="column is-6-desktop is-12-tablet"  data-aos-delay="600">
                 <br>
                 <br>
                 <br>
@@ -438,4 +447,50 @@
             </div>
           </div>
         </section>
+@endsection
+@section('js')
+<script type="text/javascript">
+ $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $(".save-data").click(function(event){
+        event.preventDefault();
+
+        let name = $("input[name=name]").val();
+        let email = $("input[name=email]").val();
+        let subject = $("input[name=subject]").val();
+        let serv_id = $("select[name=serv_id]").val();
+        let sms = $("input[name=sms]").val();
+        let _token   = $('meta[name="csrf-token"]').attr('content');
+        console.log(name);
+        $.ajax({
+          url: "{{ route('sendrequest') }}",
+          type:"POST",
+          dataType: "json",
+          data:{
+            name:name,
+            email:email,
+            subject:subject,
+            serv_id:serv_id,
+            sms:sms,
+            _token: _token
+          },
+          success:function(data){
+              alert(data.success);
+           }
+        //   success:function(response){
+        //     console.log(response);
+        //     if(response) {
+        //       $('.success').text(response.success);
+        //       $("#ajaxform")[0].reset();
+        //     }
+        //   },
+          error: function(error) {
+           console.log(error);
+          }
+         });
+    });
+  </script>
 @endsection

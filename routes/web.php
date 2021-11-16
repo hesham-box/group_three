@@ -8,13 +8,15 @@ use App\Http\Controllers;
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath','auth']
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ],function () {
         Route::get('/', function () {
             return view('auth.login');
          });
     Route::resource('/front', Controllers\Frontend\FrontendController::class);
 
+    Route::post('/sendrequest', [Controllers\Frontend\UserReqestController::class,'sendrequest'])->name('sendrequest');
+    // Route::post('/sendrequest', 'Controllers\Frontend\UserReqestController@sendrequest');
 
 });
 

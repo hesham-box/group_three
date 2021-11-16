@@ -19,9 +19,10 @@ class FrontendController extends Controller
     {
         $servs = Service::orderBy('id','DESC')->limit(4)->get();
         $services = Service::orderBy('id','DESC')->limit(6)->get();
+        $allservices = Service::orderBy('id','DESC')->get();
         $feedbacks = Feedback::orderBy('id','DESC')->limit(6)->get();
         $nav_Data=navbar_details::orderby('number_nav')->get();
-        return view('/front',compact('servs','services','feedbacks','nav_Data'));
+        return view('/front',compact('servs','services','feedbacks','nav_Data','allservices'));
 
     }
 
