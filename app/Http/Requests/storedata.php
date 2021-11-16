@@ -17,8 +17,15 @@ class storedata extends FormRequest
         return [
             'name' => 'required',
             // 'email' => 'required|email|unique:users,email',
-            'email' => ['required',Rule::unique('users')->ignore($this->user()->id)],
-            'password' => 'required|same:confirm-password',
+            // 'email' => 'required|email|unique:users,email,'.$this->user->id,
+            // 'email' => ['required',Rule::unique('users')->ignore($this->user()->id)],
+            'email' => ['required', Rule::unique('users')->ignore($this->user)],
+            // 'password' => 'required|same:confirm-password',
+            // 'password' => ['required',
+            //    'min:6',
+            //    'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\x])(?=.*[!$#%]).*$/',
+            //    'confirmed'],
+            //    'password_confirm' => 'required|same:password',
             'image' => 'image',
             'status' => 'required|in:active,unactive',
         ];

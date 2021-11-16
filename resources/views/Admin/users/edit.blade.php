@@ -30,7 +30,7 @@
                         <div class="m-t-10">
                             <input type="password" class="form-control"
                                    data-parsley-equalto="#pass2"
-                                   placeholder="Re-Type Password" name="confirm-password" value="{{ $user->password }}/>
+                                   placeholder="Re-Type Password" name="confirm-password" />
                         </div>
                     </div>
                     <div class="form-group">
