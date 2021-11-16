@@ -13,6 +13,7 @@ class RepoServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->bind(Repo\UsersInterface::class, Repo\UsersRepo::class);
         $this->app->bind(Repo\ServicesInterface::class, Repo\ServicesRepo::class);
     }
 

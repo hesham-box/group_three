@@ -3,10 +3,10 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use Illuminate\Validation\Rule;
 class storedata extends FormRequest
 {
-   
+
     public function authorize()
     {
         return true;
@@ -15,17 +15,24 @@ class storedata extends FormRequest
     public function rules()
     {
         return [
-            // 'first' => 'required|unique:cats|max:20',
-            // 'name' => 'required|unique:sections|max:20',
-            // 'desc' => 'required|unique:cats|max:20',
-            // 'last' => 'required|unique:cats|max:20',
+            'name' => 'required',
+            // 'email' => 'required|email|unique:users,email',
+            'email' => ['required',Rule::unique('users')->ignore($this->user()->id)],
+            'password' => 'required|same:confirm-password',
+            'image' => 'image',
+            'status' => 'required|in:active,unactive',
         ];
     }
     public function messages()
     {
         return [
-                // 'first.required' => 'هذا الحقل مطلوب',
-                // 'first.unique'   => 'هذا الحقل موجود ياعم محمد',
+            // 'serve_name.required' => trans('validation.required'),
+            // 'serve_name.unique' => trans('validation.unique'),
+            // 'serve_name_en.required' => trans('validation.required'),
+            // 'serve_name_en.unique' => trans('validation.unique'),
+            // 'serve_name_en.regex' => trans('site.required_en'),
+            // 'serve_name.regex' => trans('site.required_ar'),
+            // 'desc.required'=>trans('site.desc_required'),
         ];
     }
 }
