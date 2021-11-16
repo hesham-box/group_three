@@ -11,7 +11,7 @@
                         @method('PUT')
                         <div class="form-group">
                             <label for="inputName" class="control-label">order_no </label>
-                            <input type="text" class="form-control"  readonly id="inputName" name="order_no"
+                            <input type="text" class="form-control"  readonly id="inputName" name="track_no"
                                    value="{{$tracking_steps->track_no}}">
                         </div>
 

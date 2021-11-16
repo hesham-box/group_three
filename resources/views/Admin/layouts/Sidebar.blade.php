@@ -87,7 +87,37 @@
                             <span class="badge badge-success badge-pill float-right"></span>
                         </span>
                     </a>
+<<<<<<< HEAD
+                </li>
+                <li>
+                    <a href="{{ route('agreements.index') }}" class="waves-effect">
+                        <i class="dripicons-home"></i>
+                        <span>{{ trans('site.agreement') }}
+                            <span class="badge badge-success badge-pill float-right"></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+
+                        <i class="fa fa-signing"></i>
+                        <span>{{ trans('site.feedback') }}
+                            <span class="badge badge-success badge-pill float-right"></span>
+                        </span>
+                    </a>
+                </li>
+=======
                 </li> --}}
+>>>>>>> 93d8305060db2b276dbf6b12d8cdc9177c9f8538
+                <li>
+                    <a href="{{ route('events.index') }}" class="waves-effect">
+
+                        <i class="fa fa-signing"></i>
+                        <span>{{ trans('site.event') }}
+                            <span class="badge badge-success badge-pill float-right"></span>
+                        </span>
+                    </a>
+                </li>
                 <li>
                     <a href="{{ route('tracking_steps.index') }}" class="waves-effect">
                         <i class="dripicons-home"></i>

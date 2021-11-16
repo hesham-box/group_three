@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Feedback;
 use App\Models\Service;
 use App\Models\User;
+use App\Models\Event;
+
 
 class AdminsController extends Controller
 {
@@ -20,7 +22,8 @@ class AdminsController extends Controller
         $users = User::count();
         $services = Service::count();
         $feedback = Feedback::count();
-        return view('dashboard',compact('users','services','feedback'));
+        $events=Event::count();
+        return view('dashboard',compact('users','services','feedback','events'));
     }
 
     /**

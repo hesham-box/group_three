@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Agreement;
+use App\Models\Event;
 use App\Models\Feedback;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -22,7 +24,17 @@ class FrontendController extends Controller
         $allservices = Service::orderBy('id','DESC')->get();
         $feedbacks = Feedback::orderBy('id','DESC')->limit(6)->get();
         $nav_Data=navbar_details::orderby('number_nav')->get();
+<<<<<<< HEAD
+        $events=Event::all()->last();
+        $Last_service = Service::orderBy('id','DESC')->first();
+        $Last_agreement=Agreement::orderBy('id','DESC')->first();
+        // $news=News::orderBy('id', 'desc')->first();
+        // $news=News::all()->last()->id;
+        // $news=News::orderBy('id', 'desc')->first()->id;
+        return view('/front',compact('servs','services','feedbacks','nav_Data','events','Last_service','Last_agreement'));
+=======
         return view('/front',compact('servs','services','feedbacks','nav_Data','allservices'));
+>>>>>>> 93d8305060db2b276dbf6b12d8cdc9177c9f8538
 
     }
 

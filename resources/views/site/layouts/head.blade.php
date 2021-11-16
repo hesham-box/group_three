@@ -7,8 +7,8 @@
 <meta name="keywords" content="creative, niche, responsive, html5, css3, multipurpose, all in one, html, template">
 
 <title>Logistics | Joo - Niche Multi-Purpose HTML Template</title>
-<link rel="stylesheet" href="{{ URL::asset('front/css/vendor.min.css?v=1557446391092') }}">
-<link rel="stylesheet" href="{{ URL::asset('front/css/styles.min.css?v=1557446391092') }}">
+<link rel="stylesheet" href="{{ URL::asset('front/css/vendor.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('front/css/styles.css') }}">
 <link rel="stylesheet" href="{{URL:: asset('front/css/custom.css?v=1557446391092') }}">
 {{-- <link rel="stylesheet" href="{{ asset('front/css/owl.carousel.min') }}"> --}}
 {{-- <link rel="stylesheet" href="{{ asset('front/css/owl.theme.default.min') }}"> --}}

@@ -150,6 +150,74 @@
             </div>
           </section>
         {{-- End services section --}}
+
+         {{-- start Event && agreement and service section --}}
+        <section id="services" class="section services-section has-background-primary-light is-clearfix">
+          <div class="container">
+            <div class="columns is-variable is-multiline is-4">
+              <div class="column is-5-desktop is-12-tablet">
+                <p class="heading-title-top">الخدمات اللوجستية</p>
+                <h1 class="heading-title style-3 has-text-left">خدماتنا الخاصة</h1>
+              </div>
+              <div class="column is-7-desktop is-12-tablet">
+                <p class="heading-title-bottom">خدمتنا تتحدث عننا ونحتاج الى ارائكم واقتراحتكم شكرااا جزيلا لكم فريق <strong style="color:rgb(240, 29, 29);font-size:30px;font-weight:bold;">مورا سوفت</strong></p>
+              </div>
+            </div>
+            <br>
+
+            <div class="columns is-variable is-4 is-multiline boxes-style-2">
+             
+              <div class="column is-4" >
+                  <div class="box-item">
+                  <a href="#">
+                      <img alt="no photo" src="{{ asset('uploads/event/'.$events->image) }}" style="max-height: 344px ;">
+                  </a>
+                  <h3>
+                      <a href="#">{{ $events->event_title }}</a>
+                  </h3>
+                  <p>{{ $events->desc }}</p>
+                  <p>{{ $events->status == 1 ?'Available':'Unavialable' }}</p>
+                  <a href="#" class="button"> see More</a>
+                  </div>
+                  <!-- .box-item -->
+              </div>
+              <div class="column is-4" >
+                <div class="box-item">
+                <a href="#">
+                    <img alt="no photo" src="{{ asset('uploads/agreement/'.$Last_agreement->image) }}" style="max-height: 344px ;">
+                </a>
+                <h3>
+                    <a href="#">{{ $Last_agreement->agreement_title }}</a>
+                </h3>
+                <p>{{ $Last_agreement->desc }}</p>
+                <p>{{ $Last_agreement->status == 1 ?'Available':'Unavialable' }}</p>
+                <a href="#" class="button"> see more</a>
+                </div>
+                <!-- .box-item -->
+            </div>
+              <div class="column is-4" >
+                <div class="box-item">
+                <a href="#">
+                    <img alt="no photo" src="{{ asset('uploads/event/'.$Last_service->image) }}" style="max-height: 344px ;">
+                </a>
+                <h3>
+                    <a href="#">{{ $Last_service->service_name }}</a>
+                </h3>
+                <p>{{ $Last_service->desc }}</p>
+                <p>{{ $Last_service->status == 1 ?'Available':'Unavialable' }}</p>
+                <a href="#" class="button"> Make Order</a>
+                </div>
+                <!-- .box-item -->
+            </div>
+       
+
+            </div>
+          </div>
+        </section>
+      {{-- End Event && agreement and service section --}}
+
+
+
         {{-- video section  --}}
         <section class="section watch-video is-clearfix">
             <div class="container">

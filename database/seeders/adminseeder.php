@@ -36,6 +36,11 @@ class adminseeder extends Seeder
                 'email' => 'hesham@gmail.com',
                 'password' => bcrypt('123456'),
             ],
+             [
+                'name' => 'Asmaa',
+                'email' => 'asmaahosnyaly@gmail.com',
+                'password' => bcrypt('123456'),
+            ],
             // 'admin'    =>'0',
         ]);
     }

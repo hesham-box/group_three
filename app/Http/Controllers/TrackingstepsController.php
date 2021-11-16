@@ -59,10 +59,10 @@ class TrackingstepsController extends Controller
     }
 
 
-    public function update(Request $request)
+    public function update(Request $request,$id)
     {
 
-        $tracking_step = tracking_step::findOrFail($request->id);
+        $tracking_step = tracking_step::findOrFail($id);
 
         $tracking_step->update([
             'track_no' => $request->track_no,
@@ -71,8 +71,8 @@ class TrackingstepsController extends Controller
 
         ]);
 
-        session()->flash('Edit', '   ');
-        return back();
+        session()->flash('Edit', '  tracking_step updated successfully  ');
+         return redirect('/tracking_steps');
     }
 
 
