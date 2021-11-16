@@ -87,7 +87,7 @@
                             <span class="badge badge-success badge-pill float-right"></span>
                         </span>
                     </a>
-<<<<<<< HEAD
+
                 </li>
                 <li>
                     <a href="{{ route('agreements.index') }}" class="waves-effect">
@@ -106,9 +106,9 @@
                         </span>
                     </a>
                 </li>
-=======
+
                 </li> --}}
->>>>>>> 93d8305060db2b276dbf6b12d8cdc9177c9f8538
+
                 <li>
                     <a href="{{ route('events.index') }}" class="waves-effect">
 

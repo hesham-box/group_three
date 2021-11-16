@@ -166,24 +166,24 @@
             <br>
 
             <div class="columns is-variable is-4 is-multiline boxes-style-2">
-             
+
               <div class="column is-4" >
                   <div class="box-item">
                   <a href="#">
-                      <img alt="no photo" src="{{ asset('uploads/event/'.$events->image) }}" style="max-height: 344px ;">
+                      {{-- <img alt="no photo" src="{{ asset('uploads/event/'.$events->image) }}" style="max-height: 344px ;"> --}}
                   </a>
-                  <h3>
+                  {{-- <h3>
                       <a href="#">{{ $events->event_title }}</a>
                   </h3>
                   <p>{{ $events->desc }}</p>
                   <p>{{ $events->status == 1 ?'Available':'Unavialable' }}</p>
-                  <a href="#" class="button"> see More</a>
+                  <a href="#" class="button"> see More</a> --}}
                   </div>
                   <!-- .box-item -->
               </div>
               <div class="column is-4" >
                 <div class="box-item">
-                <a href="#">
+                {{-- <a href="#">
                     <img alt="no photo" src="{{ asset('uploads/agreement/'.$Last_agreement->image) }}" style="max-height: 344px ;">
                 </a>
                 <h3>
@@ -191,12 +191,12 @@
                 </h3>
                 <p>{{ $Last_agreement->desc }}</p>
                 <p>{{ $Last_agreement->status == 1 ?'Available':'Unavialable' }}</p>
-                <a href="#" class="button"> see more</a>
+                <a href="#" class="button"> see more</a> --}}
                 </div>
                 <!-- .box-item -->
             </div>
               <div class="column is-4" >
-                <div class="box-item">
+                {{-- <div class="box-item">
                 <a href="#">
                     <img alt="no photo" src="{{ asset('uploads/event/'.$Last_service->image) }}" style="max-height: 344px ;">
                 </a>
@@ -205,11 +205,11 @@
                 </h3>
                 <p>{{ $Last_service->desc }}</p>
                 <p>{{ $Last_service->status == 1 ?'Available':'Unavialable' }}</p>
-                <a href="#" class="button"> Make Order</a>
+                <a href="#" class="button"> Make Order</a> --}}
                 </div>
                 <!-- .box-item -->
             </div>
-       
+
 
             </div>
           </div>
@@ -482,10 +482,10 @@
                         <div class="control is-expanded">
                           <div class="select" name="serv_id">
                             <select>
-                                <option readonly >--Chosse Your Services--</option>
+                                {{-- <option readonly >--Chosse Your Services--</option>
                                 @foreach ($allservices as $serv )
                                 <option value="{{ $serv->id }}">{{ $serv->serve_name }}</option>
-                                @endforeach
+                                @endforeach --}}
                             </select>
                           </div>
                         </div>
